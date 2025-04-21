@@ -1,56 +1,65 @@
-/*  VIPSTRANKA.COM  —  dark elegance   */
+/* ——— GLOBAL ——— */
 :root{
-  --rose: #ff4b8b;
-  --rose-dark:#e63a78;
-  --bg:#0d0d0d;
-  --card:#1b1b1b;
-  --text:#f5f5f5;
+  --rose:        #ff4b8b;
+  --rose-dark:   #e63a78;
+  --bg:          #0d0d0d;
+  --card:        #1b1b1b;
+  --text:        #f5f5f5;
+  --online:      #46dd73;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  font-family:"Inter",Arial,Helvetica,sans-serif;
-  background:var(--bg) url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABC...") repeat; /* jemný šum */
+  font-family:'Inter',Arial,Helvetica,sans-serif;
+  background:var(--bg);
   color:var(--text);
   display:flex;justify-content:center;align-items:center;
-  min-height:100vh;padding:28px;
+  min-height:100vh;
+  padding:24px;
 }
 
+/* ——— CARD ——— */
 .card{
-  width:100%;max-width:420px;text-align:center;
+  width:100%;max-width:380px;
   background:var(--card);
-  border-radius:22px;
-  box-shadow:0 14px 30px rgba(0,0,0,.55);
-  padding:38px 30px;
+  border:2px solid #333;
+  border-radius:18px;                    /* jemně hranaté */
+  padding:42px 32px;
+  text-align:center;
+  box-shadow:0 8px 28px rgba(0,0,0,.45);
 }
 
-.pfp{
-  width:160px;height:160px;object-fit:cover;
+/* ——— PROFILE PIC ——— */
+.avatar{
+  width:140px;height:140px;
   border-radius:50%;
+  object-fit:cover;
   border:4px solid var(--rose);
-  margin-bottom:26px;
+  box-shadow:0 6px 18px rgba(0,0,0,.6);
 }
 
-h1{
-  font-family:"Playfair Display",serif;
-  font-size:30px;font-weight:700;letter-spacing:.4px;
-  margin-bottom:10px;
-}
+/* ——— TEXT ——— */
+.name   {font-size:28px;font-weight:600;margin:22px 0 6px}
+.status {font-size:15px;color:var(--online);margin-bottom:26px}
 
-.tagline{
-  font-size:15px;opacity:.8;margin-bottom:28px;
-}
-
+/* ——— BUTTONS ——— */
 .btn{
-  display:block;width:100%;max-width:340px;
-  margin:14px auto;padding:15px 0;
-  font-size:17px;font-weight:600;
-  border:none;border-radius:14px;cursor:pointer;
-  text-decoration:none;color:#fff;transition:.25s;
+  display:block;width:100%;
+  padding:15px 0;margin:10px 0;
+  font-size:17px;font-weight:600;text-decoration:none;
+  color:#fff;background:#444;border-radius:6px;   /* hranaté rohy */
+  transition:background .15s ease,transform .15s ease;
 }
+.btn:hover  {transform:translateY(-2px)}
+.btn:active {transform:none}
 
-.btn.tiktok {background:#000;}
-.btn.twitter{background:#1da1f2;}
-.btn.vip    {background:var(--rose);}
-.btn:hover  {transform:translateY(-3px);box-shadow:0 6px 14px rgba(0,0,0,.35);}
+/* Platform barvy */
+.vip     {background:var(--rose)}
+.vip:hover{background:var(--rose-dark)}
+
+.tiktok  {background:#000}
+.tiktok:hover{background:#222}
+
+.twitter {background:#1d9bf0}
+.twitter:hover{background:#1787d6}
