@@ -1,65 +1,59 @@
-/* ——— GLOBAL ——— */
-:root{
-  --rose:        #ff4b8b;
-  --rose-dark:   #e63a78;
-  --bg:          #0d0d0d;
-  --card:        #1b1b1b;
-  --text:        #f5f5f5;
-  --online:      #46dd73;
-}
-
+/* === Základ === */
 *{box-sizing:border-box;margin:0;padding:0}
-
 body{
-  font-family:'Inter',Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
+  font-family:'Inter',sans-serif;
+  background:#0a0a0a;                    /* černé pozadí celé stránky */
   display:flex;justify-content:center;align-items:center;
-  min-height:100vh;
-  padding:24px;
+  min-height:100vh;color:#fff;
 }
 
-/* ——— CARD ——— */
+/* === Karta === */
 .card{
   width:100%;max-width:380px;
-  background:var(--card);
-  border:2px solid #333;
-  border-radius:18px;                    /* jemně hranaté */
-  padding:42px 32px;
-  text-align:center;
-  box-shadow:0 8px 28px rgba(0,0,0,.45);
+  background:rgba(255,225,235,0.11);     /* jemně narůžovělé pozadí */
+  border:2px solid rgba(255,255,255,.12);
+  border-radius:22px;padding:42px 30px;text-align:center;
+  box-shadow:0 8px 24px rgba(0,0,0,.45);
+  backdrop-filter:blur(16px) saturate(140%);
 }
 
-/* ——— PROFILE PIC ——— */
-.avatar{
-  width:140px;height:140px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid var(--rose);
-  box-shadow:0 6px 18px rgba(0,0,0,.6);
+/* === Profilová fotka === */
+.pfp{
+  width:160px;height:160px;border-radius:50%;object-fit:cover;
+  border:4px solid rgba(255,255,255,.35);
+  box-shadow:0 6px 22px rgba(0,0,0,.6);
+  margin-bottom:24px;
 }
 
-/* ——— TEXT ——— */
-.name   {font-size:28px;font-weight:600;margin:22px 0 6px}
-.status {font-size:15px;color:var(--online);margin-bottom:26px}
+.name{font-size:32px;font-weight:700;margin-bottom:8px}
+.status{
+  color:#6eff7c;font-weight:600;margin-bottom:4px;
+  font-size:15px;
+}
+.cta{
+  font-size:14px;color:#ddd;margin-bottom:30px;
+}
 
-/* ——— BUTTONS ——— */
+/* === Tlačítka === */
 .btn{
   display:block;width:100%;
-  padding:15px 0;margin:10px 0;
-  font-size:17px;font-weight:600;text-decoration:none;
-  color:#fff;background:#444;border-radius:6px;   /* hranaté rohy */
-  transition:background .15s ease,transform .15s ease;
+  padding:16px 18px;margin:10px 0;
+  font-size:18px;font-weight:600;letter-spacing:.2px;
+  text-decoration:none;color:#fff;
+  border:2px solid transparent;          /* přidáme border pro zvýraznění */
+  border-radius:10px;
+  transition:transform .17s,box-shadow .17s,border-color .17s;
 }
-.btn:hover  {transform:translateY(-2px)}
-.btn:active {transform:none}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+  border-color:rgba(255,255,255,.25);
+}
+.btn:active{
+  transform:translateY(0);box-shadow:0 3px 9px rgba(0,0,0,.25);
+}
 
-/* Platform barvy */
-.vip     {background:var(--rose)}
-.vip:hover{background:var(--rose-dark)}
-
-.tiktok  {background:#000}
-.tiktok:hover{background:#222}
-
-.twitter {background:#1d9bf0}
-.twitter:hover{background:#1787d6}
+/* platform colours */
+.vip     {background:#ff4b5c;}           /* výrazná růžová */
+.tiktok  {background:#000;}
+.twitter {background:#1d9bf0;}
