@@ -1,59 +1,43 @@
-/* === Základ === */
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:'Inter',sans-serif;
-  background:#0a0a0a;                    /* černé pozadí celé stránky */
-  display:flex;justify-content:center;align-items:center;
-  min-height:100vh;color:#fff;
-}
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kristýnka — backstage links</title>
 
-/* === Karta === */
-.card{
-  width:100%;max-width:380px;
-  background:rgba(255,225,235,0.11);     /* jemně narůžovělé pozadí */
-  border:2px solid rgba(255,255,255,.12);
-  border-radius:22px;padding:42px 30px;text-align:center;
-  box-shadow:0 8px 24px rgba(0,0,0,.45);
-  backdrop-filter:blur(16px) saturate(140%);
-}
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 
-/* === Profilová fotka === */
-.pfp{
-  width:160px;height:160px;border-radius:50%;object-fit:cover;
-  border:4px solid rgba(255,255,255,.35);
-  box-shadow:0 6px 22px rgba(0,0,0,.6);
-  margin-bottom:24px;
-}
+  <script defer src="noiseBig.js"></script>
+</head>
+<body>
 
-.name{font-size:32px;font-weight:700;margin-bottom:8px}
-.status{
-  color:#6eff7c;font-weight:600;margin-bottom:4px;
-  font-size:15px;
-}
-.cta{
-  font-size:14px;color:#ddd;margin-bottom:30px;
-}
+  <main class="k4-big-card">
+    <img src="foto.jpg" alt="Kristýnka — profilová fotka" class="k4-big-pfp">
 
-/* === Tlačítka === */
-.btn{
-  display:block;width:100%;
-  padding:16px 18px;margin:10px 0;
-  font-size:18px;font-weight:600;letter-spacing:.2px;
-  text-decoration:none;color:#fff;
-  border:2px solid transparent;          /* přidáme border pro zvýraznění */
-  border-radius:10px;
-  transition:transform .17s,box-shadow .17s,border-color .17s;
-}
-.btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 6px 18px rgba(0,0,0,.35);
-  border-color:rgba(255,255,255,.25);
-}
-.btn:active{
-  transform:translateY(0);box-shadow:0 3px 9px rgba(0,0,0,.25);
-}
+    <h1 class="k4-big-name">Kristýnka</h1>
+    <p  class="k4-big-status">🟢 právě online</p>
+    <p  class="k4-big-cta">Tapni a uvidíš, co jinde neukazuju</p>
 
-/* platform colours */
-.vip     {background:#ff4b5c;}           /* výrazná růžová */
-.tiktok  {background:#000;}
-.twitter {background:#1d9bf0;}
+    <!-- VIP / tajný rozcestník (2. krok) -->
+    <a class="k4-big-btn k4-big-vip" href="https://kikivipstranka.com?b={{hash}}"
+       target="_self" rel="noreferrer">
+      ❣️ Vstup do VIP
+    </a>
+
+    <!-- TikTok -->
+    <a class="k4-big-btn k4-big-tiktok" href="https://www.tiktok.com/@kristynka.cengerova"
+       target="_blank" rel="noopener noreferrer">
+      🎶 TikTok
+    </a>
+
+    <!-- X / Twitter -->
+    <a class="k4-big-btn k4-big-x" href="https://x.com/kristy_cengerka"
+       target="_blank" rel="noopener noreferrer">
+      🐦 X (Twitter)
+    </a>
+  </main>
+
+</body>
+</html>
