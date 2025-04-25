@@ -1,38 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Kristýnka — backstage links</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kristýnka – oficiální odkazy</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
-  <script defer src="noiseBig.js"></script>
+  <!-- zabráníme agresivní keši na IG -->
+  <meta http-equiv="Cache-Control" content="no-store" />
+
+  <style>
+    :root{
+      font-family: system-ui, sans-serif;
+      --pink:#ff0080;
+    }
+    body{
+      display:flex;flex-direction:column;align-items:center;gap:2.5rem;
+      margin:0;padding:4rem 1rem;background:#fff5fa;
+    }
+    h1{margin:0;font-size:2.2rem;color:#000;}
+    .links{
+      display:flex;flex-direction:column;gap:1.25rem;width:100%;max-width:22rem;
+    }
+    .btn{
+      display:flex;justify-content:center;align-items:center;gap:.5rem;
+      padding:1rem 2rem;border-radius:9999px;text-decoration:none;
+      font-weight:600;color:#fff;background:var(--pink);
+      box-shadow:0 4px 14px rgba(0,0,0,.15);transition:transform .15s;
+    }
+    .btn:hover{transform:translateY(-3px);}
+    .btn.secondary{background:#000;}
+    .online{font-size:.95rem;color:#555;margin-top:-1.2rem;}
+    img.avatar{
+      width:8rem;height:8rem;border-radius:50%;object-fit:cover;
+      box-shadow:0 4px 14px rgba(0,0,0,.15);
+    }
+  </style>
 </head>
 <body>
+  <!-- tvůj profilový obrázek; nahraď URL skutečnou fotkou nebo ji vyhoď -->
+  <img class="avatar" src="profile.jpg" alt="Kristýnka">
 
-  <main class="k4-big-card">
-    <img src="foto.jpg" alt="Kristýnka — profilová fotka" class="k4-big-pfp">
+  <h1>Kristýnka</h1>
+  <p class="online">jsem právě online</p>
 
-    <h1 class="k4-big-name">Kristýnka</h1>
-    <p  class="k4-big-status">🟢 právě online</p>
-    <p  class="k4-big-cta">Tapni a uvidíš, co jinde neukazuju</p>
+  <div class="links">
+    <a class="btn" href="https://kikivipstranka.com">❣️ Moje tajná stránka</a>
+    <a class="btn secondary" href="https://www.tiktok.com/@kristynka.cengerova">TikTok</a>
+    <a class="btn secondary" href="https://x.com/kristy_cengerka">X (Twitter)</a>
+  </div>
 
-    <a class="k4-big-btn k4-big-vip"
-       href="https://kikivipstranka.com?b={{hash}}" target="_self" rel="noreferrer">
-       ❣️ Vstup do VIP
-    </a>
-
-    <a class="k4-big-btn k4-big-tiktok"
-       href="https://www.tiktok.com/@kristynka.cengerova" target="_blank" rel="noopener">
-       🎶 TikTok
-    </a>
-
-    <a class="k4-big-btn k4-big-x"
-       href="https://x.com/kristy_cengerka" target="_blank" rel="noopener">
-       🐦 X (Twitter)
-    </a>
-  </main>
-
+  <!-- JS noise kvůli fingerprintu -->
+  <script src="noisebig.js?v={{BUILD_HASH}}"></script>
 </body>
 </html>
