@@ -3,53 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kristýnka – oficiální odkazy</title>
+  <title>Kristýnka • oficiální odkazy</title>
 
-  <!-- zabráníme agresivní keši na IG -->
+  <!-- IG a Cloudflare nikdy nekešovat -->
   <meta http-equiv="Cache-Control" content="no-store" />
 
-  <style>
-    :root{
-      font-family: system-ui, sans-serif;
-      --pink:#ff0080;
-    }
-    body{
-      display:flex;flex-direction:column;align-items:center;gap:2.5rem;
-      margin:0;padding:4rem 1rem;background:#fff5fa;
-    }
-    h1{margin:0;font-size:2.2rem;color:#000;}
-    .links{
-      display:flex;flex-direction:column;gap:1.25rem;width:100%;max-width:22rem;
-    }
-    .btn{
-      display:flex;justify-content:center;align-items:center;gap:.5rem;
-      padding:1rem 2rem;border-radius:9999px;text-decoration:none;
-      font-weight:600;color:#fff;background:var(--pink);
-      box-shadow:0 4px 14px rgba(0,0,0,.15);transition:transform .15s;
-    }
-    .btn:hover{transform:translateY(-3px);}
-    .btn.secondary{background:#000;}
-    .online{font-size:.95rem;color:#555;margin-top:-1.2rem;}
-    img.avatar{
-      width:8rem;height:8rem;border-radius:50%;object-fit:cover;
-      box-shadow:0 4px 14px rgba(0,0,0,.15);
-    }
-  </style>
+  <!-- hlavní styl -->
+  <link rel="stylesheet" href="style.css?v={{BUILD_HASH}}">
 </head>
 <body>
-  <!-- tvůj profilový obrázek; nahraď URL skutečnou fotkou nebo ji vyhoď -->
-  <img class="avatar" src="profile.jpg" alt="Kristýnka">
+
+<div class="card">
+  <img class="avatar" src="foto.jpg" alt="Kristýnka">
 
   <h1>Kristýnka</h1>
-  <p class="online">jsem právě online</p>
+  <p class="tagline">Vstup do VIP zóny</p>
 
   <div class="links">
-    <a class="btn" href="https://kikivipstranka.com">❣️ Moje tajná stránka</a>
-    <a class="btn secondary" href="https://www.tiktok.com/@kristynka.cengerova">TikTok</a>
-    <a class="btn secondary" href="https://x.com/kristy_cengerka">X (Twitter)</a>
-  </div>
+    <a class="btn primary k4-big-vip"
+       href="https://kikivipstranka.com">❣️ VIP zóna</a>
 
-  <!-- JS noise kvůli fingerprintu -->
-  <script src="noisebig.js?v={{BUILD_HASH}}"></script>
+    <a class="btn"
+       href="https://www.tiktok.com/@kristynka.cengerova">TikTok</a>
+
+    <a class="btn"
+       href="https://x.com/kristy_cengerka">X (Twitter)</a>
+  </div>
+</div>
+
+<script src="noisebig.js?v={{BUILD_HASH}}"></script>
 </body>
 </html>
